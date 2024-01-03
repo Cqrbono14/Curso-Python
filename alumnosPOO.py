@@ -41,3 +41,4 @@ print(alumno2.obtener_informacion())
 alumno2.estudiar(False)
 alumno2.ir_a_clase(True)
 alumno2.hacer_tarea(False)
+
