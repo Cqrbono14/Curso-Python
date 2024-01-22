@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import functions_room, functions_users
+from .views import functions_room, functions_users, functions_reservations
 
 users_url = [
     path('create_user', functions_users.create_user, name='create_user'),
@@ -16,4 +16,9 @@ rooms_url = [
     path('delete_room', functions_room.delete_room, name='delete_room'),
 ]
 
-urlpatterns = users_url + rooms_url
+reservations_url = [
+    path('create_reservation', functions_reservations.create_reservation, name='create_reservation'),
+    path('get_reservations', functions_reservations.get_reservations, name='get_reservations'),
+]
+
+urlpatterns = users_url + rooms_url + reservations_url
